@@ -24,7 +24,7 @@ ___
 
 Snippets utilisables en association au zframework avec l'éditeur Sublime Text 2
 
-* `zmin-mq` / `zmax-mq` : crée une media query en min-width / max-width
+* `zmq-min` / `zmq-max` : crée une media query en min-width / max-width
 	* 1) variable breakpoint (`tiny`, `medium`, `large`, `big`, `max`)
 	* 2) positionnement dans la media query
 
@@ -34,12 +34,12 @@ Snippets utilisables en association au zframework avec l'éditeur Sublime Text 2
 	* 2) variable height
 	* 3) variable background-position X
 	* 4) variable background-position Y
-	* 5) variable context
+	* 5) variable context (défaut : @basefont)
 
 * `zshadow` \ `zshadow-in`: crée la mixin de box-shadow externe / interne
-	* 1) variable offset-x
-	* 2) variable offset-y
-	* 3) variable blur-radius
-	* 4) variable spread-radius
-	* 5) variable color
-	* 5) variable context
+	* 1) variable offset-x (défaut : 0)
+	* 2) variable offset-y (défaut : 0)
+	* 3) variable blur-radius (défaut : 10)
+	* 4) variable spread-radius (défaut : 0)
+	* 5) variable color (défaut : rgba(0, 0, 0, 0, .5))
+	* 5) variable context (défaut : @basefont)
