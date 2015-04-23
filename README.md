@@ -1,4 +1,4 @@
-# resources
+# Ressources
 
 ## Snippets
 
