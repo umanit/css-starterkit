@@ -1,11 +1,11 @@
 > Ce document est régulièrement mis à jour !
 
-Je recense ici mes différentes règles et bonnes pratiques d'écritude de code CSS, **couplé au préprocesseur Less**.
+Je recense ici mes différentes règles et bonnes pratiques d'écritude de code CSS, **couplé au pré-processeur Less**.
 
 ## Sommaire : 
 
 * [Nommage](#nommage)
-* [Organisation des propriétés](#organisation)
+* [Organisation](#organisation)
 * [Commentaires](#commentaires)
 * [Bonnes pratiques](#bonnes-pratiques)
 
@@ -64,15 +64,15 @@ Avec Less, on couple des propriétés natives en CSS, avec des propriétés avec
 
 J'ordonne ces groupes de prorpriétés comme ceci : 
 
-1 - Propriétés CSS natif
+1. Propriétés CSS natif
 	* a) en premières, les propriétés de positionnement (display, position)
 	* b) ensuite, pas de règle d'ordre de propriéts natives
-2 - Propriétés CSS avec variables
-3 - Mixins avec paramètres
-4 - Mixins sans paramètres
-5 - Pseudo-classes
-6 - Pseudo-éléments
-7 - Eléments enfants 
+2. Propriétés CSS avec variables
+3. Mixins avec paramètres
+4. Mixins sans paramètres
+5. Pseudo-classes
+6. Pseudo-éléments
+7. Eléments enfants 
 	* si l'imbrication est nécessaire
 	* dans l’ordre défini dans le HTML
 
