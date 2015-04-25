@@ -1,10 +1,17 @@
 # Ressources
 
-## Convention
+## Sommaire : 
 
-Répertoire de mes conventions de code par langage.
+* [Convention](#conventions)
+* [Snippets](#snipets)
+
+## Conventions
+
+Répertoire de mes conventions de code par langage. **Elles sont régulièrement complétées suivant mes expériences, mes découvertes, et mon apprentissage.
 
 ## Snippets
+
+** Uniquement disponible pour l'éditeur Sublime Text 2 **
 
 ### Utilisation
 
