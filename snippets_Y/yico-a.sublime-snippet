@@ -1,6 +1,0 @@
-<snippet>
-	<content><![CDATA[
-.ico-after(${1:@w}, ${2:@h}, ${3:@bgX}, ${4:@bgY}, ${5:@context});
-]]></content>
-	<tabTrigger>yico-a</tabTrigger>
-</snippet>
