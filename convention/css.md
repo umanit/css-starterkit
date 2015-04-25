@@ -5,7 +5,7 @@ Je recense ici mes différentes règles et bonnes pratiques d'écritude de code 
 ## Sommaire : 
 
 * [Nommage](#nommage)
-* [Organisation des propriétés](#organisation-des-proprietes)
+* [Organisation des propriétés](#organisation)
 * [Commentaires](#commentaires)
 * [Bonnes pratiques](#bonnes-pratiques)
 
@@ -58,13 +58,13 @@ Basé sur la méthode BEM (Block, Element, Modifier) et l'approche SMACSS, je r�
 	.video_highlight {}
 	.video--title {}
 
-## Organisation des propriétés
+## Organisation
 
-Avec Less, on couple des prorpriétés natives en CSS, avec des propriétés avec variables, des mixins avec paramètres, et des mixins sans paramètres.
+Avec Less, on couple des propriétés natives en CSS, avec des propriétés avec variables, des mixins avec paramètres, et des mixins sans paramètres.
 
 J'ordonne ces groupes de prorpriétés comme ceci : 
 
-1- Propriétés CSS natif
+1 - Propriétés CSS natif
 	* a) en premières, les propriétés de positionnement (display, position)
 	* b) ensuite, pas de règle d'ordre de propriéts natives
 2 - Propriétés CSS avec variables
