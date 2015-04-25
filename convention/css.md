@@ -1,3 +1,5 @@
+# Convention CSS
+
 > Ce document est régulièrement mis à jour !
 
 Je recense ici mes différentes règles et bonnes pratiques d'écritude de code CSS, **couplé au pré-processeur Less**.
