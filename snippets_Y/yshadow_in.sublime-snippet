@@ -1,0 +1,6 @@
+<snippet>
+	<content><![CDATA[
+.inset-shadow(${1:@offset-x}, ${2:@offset-y}, ${3:@blur-radius}, ${4:@spread-radius}, ${5:@color}, ${6:@context});
+]]></content>
+	<tabTrigger>yshadow_in</tabTrigger>
+</snippet>

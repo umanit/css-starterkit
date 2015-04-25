@@ -1,0 +1,6 @@
+<snippet>
+	<content><![CDATA[
+.transition(${1:@property}, ${2:@duration}, ${3:@function}, ${4:@delay});
+]]></content>
+	<tabTrigger>ytransition</tabTrigger>
+</snippet>

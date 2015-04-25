@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+/* @${1:breakpoint}screen */
+@media (max-width:unit(round((@${1:breakpoint}screen/16),5),em)) {
+	${2}
+}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>ymq_max</tabTrigger>
+</snippet>
