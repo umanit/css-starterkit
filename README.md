@@ -1,5 +1,9 @@
 # Ressources
 
+## Convention
+
+Répertoire de mes conventions de code par langage.
+
 ## Snippets
 
 ### Utilisation
