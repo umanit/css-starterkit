@@ -3,7 +3,7 @@
 ## Sommaire : 
 
 * [Convention](#convention)
-* [Snippets](#snipets)
+* [Snippets](#snippets)
 
 ## Convention
 
