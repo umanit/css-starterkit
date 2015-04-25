@@ -2,16 +2,16 @@
 
 ## Sommaire : 
 
-* [Convention](#conventions)
+* [Convention](#convention)
 * [Snippets](#snipets)
 
-## Conventions
+## Convention
 
-Répertoire de mes conventions de code par langage. **Elles sont régulièrement complétées suivant mes expériences, mes découvertes, et mon apprentissage.
+Répertoire de mes conventions de code par langage. **Elles sont régulièrement complétées suivant mes expériences, mes découvertes, et mon apprentissage**.
 
 ## Snippets
 
-** Uniquement disponible pour l'éditeur Sublime Text 2 **
+**Uniquement disponible pour l'éditeur Sublime Text 2**
 
 ### Utilisation
 
