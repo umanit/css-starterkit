@@ -1,0 +1,36 @@
+// ==========================================================================
+// Colors
+// ==========================================================================
+
+@each $key, $value in $colors {
+	.color-#{$key} { color: $value; }
+	.bg-#{$key} { background-color: $value; }
+
+	// usage: .text-{color}
+}
+
+// ==========================================================================
+// Margin / Padding
+// ==========================================================================
+
+$margin-padding-count: 0;
+
+@while $margin-padding-count <= 30 {
+	.m-a-#{$margin-padding-count} { margin: $margin-padding-count * 1px; } // All
+	.m-v-#{$margin-padding-count} { margin-top: $margin-padding-count * 1px; margin-bottom: $margin-padding-count * 1px; } // Vertical
+	.m-h-#{$margin-padding-count} { margin-left: $margin-padding-count * 1px; margin-right: $margin-padding-count * 1px; } // Horizontal
+	.m-t-#{$margin-padding-count} { margin-top: $margin-padding-count * 1px; } // Top
+	.m-r-#{$margin-padding-count} { margin-right: $margin-padding-count * 1px; } // Right
+	.m-b-#{$margin-padding-count} { margin-bottom: $margin-padding-count * 1px; } // Bottom
+	.m-l-#{$margin-padding-count} { margin-left: $margin-padding-count * 1px; } // Left
+
+	.p-a-#{$margin-padding-count} { padding: $margin-padding-count * 1px; } // All
+	.p-v-#{$margin-padding-count} { padding-top: $margin-padding-count * 1px; margin-bottom: $margin-padding-count * 1px; } // Vertical
+	.p-h-#{$margin-padding-count} { padding-left: $margin-padding-count * 1px; margin-right: $margin-padding-count * 1px; } // Horizontal
+	.p-t-#{$margin-padding-count} { padding-top: $margin-padding-count * 1px; } // Top
+	.p-r-#{$margin-padding-count} { padding-right: $margin-padding-count * 1px; } // Right
+	.p-b-#{$margin-padding-count} { padding-bottom: $margin-padding-count * 1px; } // Bottom
+	.p-l-#{$margin-padding-count} { padding-left: $margin-padding-count * 1px; } // Left
+
+	$margin-padding-count: $margin-padding-count + 5;
+}
