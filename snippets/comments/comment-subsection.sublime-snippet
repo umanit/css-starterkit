@@ -1,8 +1,0 @@
-<snippet>
-	<content><![CDATA[
-/*----------  ${1:Subsection comment block}  ----------*/
-
-]]></content>
-	<tabTrigger>comm-subsection</tabTrigger>
-	<description>Comment - Subsection comment</description>
-</snippet>
