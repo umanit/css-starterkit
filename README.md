@@ -2,6 +2,13 @@
 
 This is a starter kit for setting up any web project faster.
 
+## Requires
+
+* [Install NodeJS](https://docs.npmjs.com/getting-started/installing-node)
+* [Install Compass](http://compass-style.org/install/)
+
+## Installation
+
 First, run :
 
 `npm install`
