@@ -9,9 +9,9 @@
 	} @else {
 		font-size: $value;
 	}
-    
 
-    @if $line-height != normal { 
+
+    @if $line-height != normal {
 	    line-height: $line-height * 1px;
 	    line-height: ($line-height / 10) * 1rem;
     } @else {
@@ -53,21 +53,4 @@
     @media (max-width: map-get($breakpoints-max, $value)){
         @content;
     }
-}
-
-// ==========================================================================
-// Screen readers
-// ==========================================================================
-
-@if $bootstrap = false {
-	@mixin sr-only {
-		position: absolute;
-		width: 1px;
-		height: 1px;
-		margin: -1px;
-		padding: 0;
-		overflow: hidden;
-		clip: rect(0,0,0,0);
-		border: 0;
-	}
 }
