@@ -125,3 +125,23 @@ gulp.task('js', function () {
 // La tâche par défaut (gulp) regénère tous les assets.
 // le paramètre --production exécute les tâches js et css en minifiant les fichiers.
 gulp.task('default', ['lint', 'js', 'images', 'fonts', 'css']);
+
+gulp.task('watch', function () {
+    var onChange = function (event) {
+        console.log('File '+event.path+' has been '+event.type);
+    };
+    gulp.watch(kitPrefix + 'assets/sass/**/*.scss', ['css']).on('change', onChange);
+    gulp.watch(kitPrefix + 'assets/js/**/*.js', ['js']).on('change', onChange);
+    gulp.watch(kitPrefix + 'assets/img/**/*', ['images']).on('change', onChange);
+    gulp.watch(kitPrefix + 'assets/fonts/**/*', ['fonts']).on('change', onChange);
+});
+
+gulp.task('default',
+    [
+        'js',
+        'images',
+        'favs',
+        'fonts',
+        'css',
+    ]
+);
