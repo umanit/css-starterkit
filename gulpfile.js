@@ -136,12 +136,3 @@ gulp.task('watch', function () {
     gulp.watch(kitPrefix + 'assets/fonts/**/*', ['fonts']).on('change', onChange);
 });
 
-gulp.task('default',
-    [
-        'js',
-        'images',
-        'favs',
-        'fonts',
-        'css',
-    ]
-);
