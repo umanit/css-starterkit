@@ -13,7 +13,13 @@ var gulp = require('gulp'),
     gulpif = require('gulp-if'), // Conditionnelles dans gulp
     jshint = require('gulp-jshint'); // Linter JS
 
-var kitPrefix = './';
+var kitPrefix = './',
+    destPaths = {
+        css: 'assets/css',
+        js: 'assets/js',
+        img: 'assets/img',
+        fonts: 'assets/fonts'
+    };
 
 /** si cette variable est à true, les chemins sont configurés pour un projet Symfony.
  * @type boolean
@@ -130,7 +136,7 @@ gulp.task('watch', function () {
     var onChange = function (event) {
         console.log('File '+event.path+' has been '+event.type);
     };
-    gulp.watch(kitPrefix + 'assets/sass/**/*.scss', ['css']).on('change', onChange);
+    gulp.watch(kitPrefix + 'assets/scss/**/*.scss', ['css']).on('change', onChange);
     gulp.watch(kitPrefix + 'assets/js/**/*.js', ['js']).on('change', onChange);
     gulp.watch(kitPrefix + 'assets/img/**/*', ['images']).on('change', onChange);
     gulp.watch(kitPrefix + 'assets/fonts/**/*', ['fonts']).on('change', onChange);
