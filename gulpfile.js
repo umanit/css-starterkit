@@ -15,16 +15,16 @@ var gulp = require('gulp'),
 
 var kitPrefix = './',
     destPaths = {
-        css: 'assets/css',
-        js: 'assets/js',
-        img: 'assets/img',
-        fonts: 'assets/fonts'
+        css: './assets/css',
+        js: './assets/js',
+        img: './assets/img',
+        fonts: './assets/fonts'
     };
 
 /** si cette variable est à true, les chemins sont configurés pour un projet Symfony.
  * @type boolean
  */
-var isSymfony = true;
+var isSymfony = false;
 
 // @todo : configurer les variables pour les autres types de projets.
 
