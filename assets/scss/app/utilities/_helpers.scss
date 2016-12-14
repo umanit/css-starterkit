@@ -14,8 +14,8 @@ $margin-padding-count: 0;
 	.m-l-#{$margin-padding-count} { margin-left: $margin-padding-count * 1px; } // Left
 
 	.p-a-#{$margin-padding-count} { padding: $margin-padding-count * 1px; } // All
-	.p-v-#{$margin-padding-count} { padding-top: $margin-padding-count * 1px; margin-bottom: $margin-padding-count * 1px; } // Vertical
-	.p-h-#{$margin-padding-count} { padding-left: $margin-padding-count * 1px; margin-right: $margin-padding-count * 1px; } // Horizontal
+	.p-v-#{$margin-padding-count} { padding-top: $margin-padding-count * 1px; padding-bottom: $margin-padding-count * 1px; } // Vertical
+	.p-h-#{$margin-padding-count} { padding-left: $margin-padding-count * 1px; padding-right: $margin-padding-count * 1px; } // Horizontal
 	.p-t-#{$margin-padding-count} { padding-top: $margin-padding-count * 1px; } // Top
 	.p-r-#{$margin-padding-count} { padding-right: $margin-padding-count * 1px; } // Right
 	.p-b-#{$margin-padding-count} { padding-bottom: $margin-padding-count * 1px; } // Bottom
