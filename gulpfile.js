@@ -59,6 +59,12 @@ var isSymfony = false;
         js: './wp-content/themes/{MYPROJECT}/js',
     }
 
+    In a Bolt project :
+    var destPaths = {
+        css: './public/theme/{MYPROJECT}/css',
+        js: './public/theme/{MYPROJECT}/js',
+    }
+
     etc...
  */
 

@@ -2,6 +2,8 @@
 // Breakpoints
 // ==========================================================================
 
+$breakpoints: null;
+$breakpoints-max: null;
 @if $bootstrap == true {
     $breakpoints: (
         xs: $screen-xs-min,
