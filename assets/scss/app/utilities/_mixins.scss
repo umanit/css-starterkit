@@ -2,19 +2,19 @@
 // Alignment
 // ==========================================================================
 
-@mixin text-left { 
+@mixin text-left {
     @if $bootstrap == false {
-        text-align: left; 
+        text-align: left;
     }
 }
-@mixin text-center { 
+@mixin text-center {
     @if $bootstrap == false {
-        text-align: center; 
+        text-align: center;
     }
 }
-@mixin text-right { 
+@mixin text-right {
     @if $bootstrap == false {
-        text-align: right; 
+        text-align: right;
     }
 }
 
@@ -43,7 +43,7 @@
 // Margin / Padding
 // ==========================================================================
 
-@mixin m-a($value) { margin: $value * 1px; }
+@mixin m-a($margin-top, $margin-right: $margin-top, $margin-bottom: $margin-top, $margin-left: $margin-right) { margin: $margin-top*1px $margin-right*1px $margin-bottom*1px $margin-left*1px; }
 @mixin m-v($value) { margin-top: $value * 1px; margin-bottom: $value * 1px; }
 @mixin m-h($value) { margin-left: $value * 1px; margin-right: $value * 1px; }
 @mixin m-t($value) { margin-top: $value * 1px; }
@@ -51,7 +51,7 @@
 @mixin m-b($value) { margin-bottom: $value * 1px; }
 @mixin m-l($value) { margin-left: $value * 1px; }
 
-@mixin p-a($value) { padding: $value * 1px; }
+@mixin p-a($padding-top, $padding-right: $padding-top, $padding-bottom: $padding-top, $padding-left: $padding-right) { padding: $padding-top*1px $padding-right*1px $padding-bottom*1px $padding-left*1px; }
 @mixin p-v($value) { padding-top: $value * 1px; padding-bottom: $value * 1px; }
 @mixin p-h($value) { padding-left: $value * 1px; padding-right: $value * 1px; }
 @mixin p-t($value) { padding-top: $value * 1px; }
@@ -80,7 +80,7 @@
 // ==========================================================================
 
 @mixin sr-only {
-    @if $bootstrap == false {    
+    @if $bootstrap == false {
         position: absolute;
         width: 1px; height: 1px;
         margin: -1px; padding: 0;
