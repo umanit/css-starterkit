@@ -95,7 +95,7 @@ gulp.task('css', function () {
     ;
 });
 
-// On copie les images ailleurs (de app/Resoruces à web/)
+// On copie les images ailleurs (de app/Resources à web/)
 gulp.task('images', function () {
   gulp.src(kitPrefix + '/assets/img/**/*')
     .pipe(plumber())
