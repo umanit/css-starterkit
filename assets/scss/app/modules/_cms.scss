@@ -1,0 +1,17 @@
+// ==========================================================================
+// CMS
+// ==========================================================================
+
+/**
+ * Tous les styles de ce module ciblent les contenus contribués par l'utilisateur (contenus et blocs).
+ *
+ * Ce qui implique qu'on ne peut pas cibler les éléments par des classes, mais via un
+ * sélecteur d'éléments (.wysiwyg h2, .wysiwyg a...).
+ *
+ * Pour les contenus, il faut englober le contenu par la classe `.wysiwyg`.
+ */
+
+.wysiwyg {
+	/* @note : Tous les styles appliqués aux contenus contribués doivent être placés ici */
+}
+
