@@ -2,7 +2,7 @@
 .idea/
 .sass-cache/
 index.html
-assets/css
+assets/css/style.css
 assets/js/scripts.js
 assets/scss/.DS_Store
 assets/scss/vendor/.DS_Store
