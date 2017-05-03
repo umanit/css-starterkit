@@ -2,6 +2,42 @@
 // Breakpoints
 // ==========================================================================
 
+/*doc
+---
+title: Breakpoints
+name: breakpoints
+category: Base CSS
+---
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Breakpoint</th>
+            <th>Valeur</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>xs</td>
+            <td>480px</td>
+        </tr>
+        <tr>
+            <td>sm</td>
+            <td>768px</td>
+        </tr>
+        <tr>
+            <td>md</td>
+            <td>992px</td>
+        </tr>
+        <tr>
+            <td>lg</td>
+            <td>1200px</td>
+        </tr>
+    </tbody>
+</table>
+
+*/
+
 $breakpoints: ();
 $breakpoints-max: ();
 @if $bootstrap == true {
@@ -38,3 +74,24 @@ $breakpoints-max: ();
 
 $black: #000;
 $white: #fff;
+
+// ==========================================================================
+// Fonts
+// ==========================================================================
+
+/*doc
+---
+title: Typographie
+name: typography
+category: Base CSS
+---
+
+<h1>Titre de niveau 1</h1>
+<h2>Titre de niveau 2</h2>
+<h3>Titre de niveau 3</h3>
+<h4>Titre de niveau 4</h4>
+<h5>Titre de niveau 5</h5>
+<h6>Titre de niveau 6</h6>
+
+*/
+

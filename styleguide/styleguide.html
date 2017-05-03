@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <title> | Guide de style Febea</title>
+        <meta charset="UTF-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- Stylesheets -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../assets/css/style.css">
+        <link rel="stylesheet" href="./css/style.css">
+
+        <!-- Scripts -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+        <script src="../assets/js/scripts.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <h1>Guide de style</h1>
+
+                <nav class="navbar navbar-inverse">
+                    <div class="container-fuild">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav" aria-expanded="false">
+                                <span class="sr-only">Ouvrir/Fermer le menu</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                        </div>
+                        <div class="collapse navbar-collapse" id="nav">
+                            <ul class="nav navbar-nav">
+
+                                
+                                <li class="">
+                                    <a href="modules.html">Modules</a>
+                                </li>
+                                
+                                <li class="">
+                                    <a href="base_css.html">Base CSS</a>
+                                </li>
+                                
+                                <li class="">
+                                    <a href="index.html"></a>
+                                </li>
+                                
+                            </ul>
+                        </div> <!-- /.navbar-collapse -->
+                    </div> <!-- /.container-fluid -->
+                </nav> <!-- /.navbar -->
+            </header>
+
+            <section class="content">
+                <div class="container">
+                    <div class="tile">
+                        <div class="row">
+                            <div class="col-md-2 hidden-xs hidden-sm">
+                                <div id="scrollspy" data-spy="affix" data-offset-top="140">
+                                    <ul class="nav nav-pills nav-stacked">
+                                        
+                                    </ul>
+                                </div>
+                            </div> <!-- /.col-*-* -->
+
+                        <div class="col-xs-12 col-md-10">
+<blockquote>
+<p class="styleguide">Ce document doit être tenu à jour pour assurer la maintenabilité et la documentation front-end</p></blockquote>
+<p class="styleguide"><strong>Le guide de style est une bibliothèque des éléments graphiques utilisés sur le projet. Il permet de visualiser chaque élément indépendamment, facilitant les tests et la reprise de code.</strong></p>
+<h2>Hiérarchie</h2>
+<p class="styleguide">Il est décomposé suivant ces catégories :</p><ul class="styleguide"><li><a class="styleguide" href="base_css.html" title="base_css.html">Base CSS</a> : Styles de configuration du projet, éléments de base (boutons, tableaux, formulaires...)</li>
+<li><a class="styleguide" href="modules.html" title="modules.html">Modules</a> : Composants ré-utilisables sur l&#39;intégralité du projet</li>
+</ul>        				</div> <!-- /.col-*-* -->
+        			</div> <!-- /.row -->
+            </div> <!-- /.container -->
+		</section> <!-- /.content -->
+
+		<script>
+            // Etat actif dans le menu latéral
+            $('.nav-pills > li > a').on('click', function(){
+                $(this).parent().addClass('active').siblings().removeClass('active');
+            });
+
+            $('body').scrollspy({ target: '#scrollspy' });
+
+            // Afficher / Masquer la source
+            $('.codeBlock').each(function(){
+            	var $source = $(this).find('.highlight').addClass('collapse');
+
+                $(this).prepend('<button type="button" class="btn btn-primary" data-toggle="collapse">Afficher la source</button>');
+                $(this).find('[data-toggle="collapse"]').on('click', function(){
+                	$source.slideToggle('fast');
+                });
+            });
+        </script>
+	</body>
+</html>
