@@ -85,9 +85,7 @@ if (isSymfony) {
 // SASS et minification, compilation en CSS
 gulp.task('css', function() {
     return gulp.src('assets/scss/**/*.scss')
-        .pipe(plumber({
-            errorHandler: onError
-        }))
+        .pipe(plumber())
         .pipe(compass({
             sass: kitPrefix + 'assets/scss',
             css: destPaths.css,
