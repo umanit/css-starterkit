@@ -68,6 +68,9 @@ var isSymfony = false;
 
     etc...
  */
+function onError(err) {
+    this.emit('end');
+}
 
 if (isSymfony) {
     kitPrefix = './app/Resources/';
@@ -82,7 +85,9 @@ if (isSymfony) {
 // SASS et minification, compilation en CSS
 gulp.task('css', function() {
     return gulp.src('assets/scss/**/*.scss')
-        .pipe(plumber())
+        .pipe(plumber({
+            errorHandler: onError
+        }))
         .pipe(compass({
             sass: kitPrefix + 'assets/scss',
             css: destPaths.css,
@@ -90,6 +95,7 @@ gulp.task('css', function() {
             images: destPaths.img,
             line_comments: true
         }))
+        .on('error', onError)
         .pipe(gulpif(argv.production, minifyCSS()))
         .pipe(gulp.dest(destPaths.css))
     ;
