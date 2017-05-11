@@ -1,9 +1,11 @@
 .idea/
 .sass-cache/
 index.html
+styleguide/*.html
 assets/css
 assets/js/scripts.js
 assets/scss/.DS_Store
 assets/scss/vendor/.DS_Store
 node_modules
 TODO.md
+.DS_Store
