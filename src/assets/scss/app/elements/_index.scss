@@ -1,0 +1,19 @@
+/**
+ *
+ * ELEMENTS
+ * Styles dédiés aux éléments spécifiques
+ *
+ * Certains éléments nécessitent un code spécifique qui ne peut être ré-utilisable
+ * au travers du projet (à l'inverse des modules). Il s'agit de styles fortement
+ * dépendants du contexte et du contenu de l'élément.
+ *
+ * Exemple : home slider home, payment form, weather widget...
+ *
+ */
+
+
+// ==========================================================================
+// Slider de la page Home
+// ==========================================================================
+
+@import 'slider-home';

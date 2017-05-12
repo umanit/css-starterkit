@@ -1,0 +1,741 @@
+@charset "UTF-8";
+/**
+ *
+ * UTILITIES
+ * Configuration du projet, fonctions et classes utiles
+ *
+ * Regroupe les variables (`_global.scss`), les fonctions côté SCSS (`_mixins.scss),
+ * et les classes utiles côté HTML (`_helpers`).
+ *
+ */
+/*doc
+---
+title: Breakpoints
+name: breakpoints
+category: Base CSS
+---
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Breakpoint</th>
+            <th>Valeur</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>xs</td>
+            <td>480px</td>
+        </tr>
+        <tr>
+            <td>sm</td>
+            <td>768px</td>
+        </tr>
+        <tr>
+            <td>md</td>
+            <td>992px</td>
+        </tr>
+        <tr>
+            <td>lg</td>
+            <td>1200px</td>
+        </tr>
+    </tbody>
+</table>
+
+`coucou.html`
+
+*/
+/*doc
+---
+title: Typographie
+name: typography
+category: Base CSS
+---
+
+<h1>Titre de niveau 1</h1>
+<h2>Titre de niveau 2</h2>
+<h3>Titre de niveau 3</h3>
+<h4>Titre de niveau 4</h4>
+<h5>Titre de niveau 5</h5>
+<h6>Titre de niveau 6</h6>
+
+*/
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.m-a-0 {
+  margin: 0px;
+}
+
+.m-v-0 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.m-h-0 {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.m-t-0 {
+  margin-top: 0px;
+}
+
+.m-r-0 {
+  margin-right: 0px;
+}
+
+.m-b-0 {
+  margin-bottom: 0px;
+}
+
+.m-l-0 {
+  margin-left: 0px;
+}
+
+.p-a-0 {
+  padding: 0px;
+}
+
+.p-v-0 {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+.p-h-0 {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.p-t-0 {
+  padding-top: 0px;
+}
+
+.p-r-0 {
+  padding-right: 0px;
+}
+
+.p-b-0 {
+  padding-bottom: 0px;
+}
+
+.p-l-0 {
+  padding-left: 0px;
+}
+
+.m-a-5 {
+  margin: 5px;
+}
+
+.m-v-5 {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.m-h-5 {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.m-t-5 {
+  margin-top: 5px;
+}
+
+.m-r-5 {
+  margin-right: 5px;
+}
+
+.m-b-5 {
+  margin-bottom: 5px;
+}
+
+.m-l-5 {
+  margin-left: 5px;
+}
+
+.p-a-5 {
+  padding: 5px;
+}
+
+.p-v-5 {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.p-h-5 {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.p-t-5 {
+  padding-top: 5px;
+}
+
+.p-r-5 {
+  padding-right: 5px;
+}
+
+.p-b-5 {
+  padding-bottom: 5px;
+}
+
+.p-l-5 {
+  padding-left: 5px;
+}
+
+.m-a-10 {
+  margin: 10px;
+}
+
+.m-v-10 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.m-h-10 {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.m-t-10 {
+  margin-top: 10px;
+}
+
+.m-r-10 {
+  margin-right: 10px;
+}
+
+.m-b-10 {
+  margin-bottom: 10px;
+}
+
+.m-l-10 {
+  margin-left: 10px;
+}
+
+.p-a-10 {
+  padding: 10px;
+}
+
+.p-v-10 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.p-h-10 {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.p-t-10 {
+  padding-top: 10px;
+}
+
+.p-r-10 {
+  padding-right: 10px;
+}
+
+.p-b-10 {
+  padding-bottom: 10px;
+}
+
+.p-l-10 {
+  padding-left: 10px;
+}
+
+.m-a-15 {
+  margin: 15px;
+}
+
+.m-v-15 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.m-h-15 {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.m-t-15 {
+  margin-top: 15px;
+}
+
+.m-r-15 {
+  margin-right: 15px;
+}
+
+.m-b-15 {
+  margin-bottom: 15px;
+}
+
+.m-l-15 {
+  margin-left: 15px;
+}
+
+.p-a-15 {
+  padding: 15px;
+}
+
+.p-v-15 {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.p-h-15 {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.p-t-15 {
+  padding-top: 15px;
+}
+
+.p-r-15 {
+  padding-right: 15px;
+}
+
+.p-b-15 {
+  padding-bottom: 15px;
+}
+
+.p-l-15 {
+  padding-left: 15px;
+}
+
+.m-a-20 {
+  margin: 20px;
+}
+
+.m-v-20 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.m-h-20 {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.m-t-20 {
+  margin-top: 20px;
+}
+
+.m-r-20 {
+  margin-right: 20px;
+}
+
+.m-b-20 {
+  margin-bottom: 20px;
+}
+
+.m-l-20 {
+  margin-left: 20px;
+}
+
+.p-a-20 {
+  padding: 20px;
+}
+
+.p-v-20 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.p-h-20 {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.p-t-20 {
+  padding-top: 20px;
+}
+
+.p-r-20 {
+  padding-right: 20px;
+}
+
+.p-b-20 {
+  padding-bottom: 20px;
+}
+
+.p-l-20 {
+  padding-left: 20px;
+}
+
+.m-a-25 {
+  margin: 25px;
+}
+
+.m-v-25 {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.m-h-25 {
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+.m-t-25 {
+  margin-top: 25px;
+}
+
+.m-r-25 {
+  margin-right: 25px;
+}
+
+.m-b-25 {
+  margin-bottom: 25px;
+}
+
+.m-l-25 {
+  margin-left: 25px;
+}
+
+.p-a-25 {
+  padding: 25px;
+}
+
+.p-v-25 {
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+.p-h-25 {
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.p-t-25 {
+  padding-top: 25px;
+}
+
+.p-r-25 {
+  padding-right: 25px;
+}
+
+.p-b-25 {
+  padding-bottom: 25px;
+}
+
+.p-l-25 {
+  padding-left: 25px;
+}
+
+.m-a-30 {
+  margin: 30px;
+}
+
+.m-v-30 {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.m-h-30 {
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.m-t-30 {
+  margin-top: 30px;
+}
+
+.m-r-30 {
+  margin-right: 30px;
+}
+
+.m-b-30 {
+  margin-bottom: 30px;
+}
+
+.m-l-30 {
+  margin-left: 30px;
+}
+
+.p-a-30 {
+  padding: 30px;
+}
+
+.p-v-30 {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.p-h-30 {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.p-t-30 {
+  padding-top: 30px;
+}
+
+.p-r-30 {
+  padding-right: 30px;
+}
+
+.p-b-30 {
+  padding-bottom: 30px;
+}
+
+.p-l-30 {
+  padding-left: 30px;
+}
+
+.row.no-gutters {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+.row.no-gutters > [class^="col-"], .row.no-gutters > [class*="col-"] {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+/**
+ *
+ * ELEMENTS
+ * Styles dédiés aux éléments spécifiques
+ *
+ * Certains éléments nécessitent un code spécifique qui ne peut être ré-utilisable
+ * au travers du projet (à l'inverse des modules). Il s'agit de styles fortement
+ * dépendants du contexte et du contenu de l'élément.
+ *
+ * Exemple : home slider home, payment form, weather widget...
+ *
+ */
+/**
+ *
+ * STRUCTURE
+ * Styles dédiés aux ensembles structurant une page
+ *
+ * Regroupe les styles globaux de chaque élément de structure : header (`_header.scss`)
+ * contenu (`_content.scss`), et footer (`_footer.scss`).
+ *
+ */
+/**
+ *
+ * MODULES
+ * Styles dédiés aux composants
+ *
+ * Regroupe les composants ré-utilisables du projet (pas de dépendance
+ * contextuelle, pas de dépendance à leur contenu).
+ *
+ * Exemple : button, form, slider, accordion...
+ *
+ */
+/*doc
+---
+title: Fil d'Ariane
+name: breadcrumb
+category: Modules
+---
+
+```html_example
+<ol class="breadcrumb">
+	<li><a href="#">Accueil</a></li>
+	<li class="active">Page</li>
+</ol>
+```
+
+*/
+/*doc
+---
+title: Boutons
+name: buttons
+category: Base CSS
+---
+
+```html_example
+<a href="#" class="btn btn-default">Bouton</a>
+```
+
+*/
+/**
+ * Tous les styles de ce module ciblent les contenus contribués par l'utilisateur (contenus et blocs).
+ *
+ * Ce qui implique qu'on ne peut pas cibler les éléments par des classes, mais via un
+ * sélecteur d'éléments (.wysiwyg h2, .wysiwyg a...).
+ *
+ * Pour les contenus, il faut englober le contenu par la classe `.wysiwyg`.
+ */
+/*doc
+---
+title: WYSIWYG
+name: wysiwyg
+category: Modules
+---
+
+```html_example
+<div class="wysiwyg">
+	<h1>Titre de niveau 1</h1>
+	<p>Lorem ipsum dolor <strong>sit amet</strong>, consectetur <em>adipisicing elit</em>.</p>
+	<ul>
+		<li>Lorem ipsum.</li>
+		<li>Lorem ipsum.</li>
+		<li>Lorem ipsum.</li>
+	</ul>
+</div>
+```
+
+*/
+.wysiwyg {
+  /* @note : Tous les styles appliqués aux contenus contribués doivent être placés ici */
+}
+
+/*doc
+---
+title: Formulaires
+name: forms
+category: Base CSS
+---
+
+## Horizontal
+
+```html_example
+<form class="form-horizontal">
+	<fieldset>
+		<legend>Legend :</legend>
+
+		<!-- Input "text" -->
+		<div class="form-group">
+			<label for="input-1" class="control-label col-sm-2">Text :</label>
+			<div class="col-sm-10">
+				<input type="text" id="input-1" class="form-control">
+			</div>
+		</div>
+
+		<!-- Input "email" -->
+		<div class="form-group">
+			<label for="input-2" class="control-label col-sm-2">Email :</label>
+			<div class="col-sm-10">
+				<input type="email" id="input-2" class="form-control">
+			</div>
+		</div>
+
+		<!-- Input "tel" -->
+		<div class="form-group">
+			<label for="input-3" class="control-label col-sm-2">Tel :</label>
+			<div class="col-sm-10">
+				<input type="tel" id="input-3" class="form-control" pattern="^((\+\d{1,3}(-| )?\(?\d\)?(-| )?\d{1,5})|(\(?\d{2,6}\)?))(-| )?(\d{3,4})(-| )?(\d{4})(( x| ext)\d{1,5}){0,1}$">
+			</div>
+		</div>
+
+		<!-- Select -->
+		<div class="form-group">
+			<label for="select-1" class="control-label col-sm-2">Select :</label>
+			<div class="col-sm-10">
+				<select id="select-1" class="form-control">
+					<option></option>
+					<option>Choix 1</option>
+					<option>Choix 2</option>
+					<option>Choix 3</option>
+				</select>
+			</div>
+		</div>
+
+		<!-- Checkbox -->
+		<div class="form-group">
+			<div class="col-sm-offset-2 col-sm-10">
+				<div class="custom-checkbox">
+					<input type="checkbox" id="checkbox-1" name="custom-checkbox" value="option1">
+					<label for="checkbox-1">Option 1</label>
+				</div>
+			</div>
+		</div>
+
+		<!-- Radio -->
+		<div class="form-group">
+			<div class="col-sm-offset-2 col-sm-10">
+				<div class="custom-radio">
+					<input type="radio" id="radio-1" name="custom-radio" value="option1">
+					<label for="radio-1">Option 1</label>
+				</div>
+			</div>
+		</div>
+
+		<!-- File -->
+		<div class="form-group">
+			<label for="file-1" class="control-label col-sm-2">File</label>
+			<div class="col-sm-10">
+				<input type="file" id="file-1" name="file-1">
+			</div>
+		</div>
+
+		<!-- Textarea -->
+		<div class="form-group">
+			<label for="textarea-1" class="control-label col-sm-2">Textarea :</label>
+			<div class="col-sm-10">
+				<textarea id="textarea-1" class="form-control"></textarea>
+			</div>
+		</div>
+	</fieldset>
+
+	<div class="text-center">
+		<input type="submit" class="btn btn-default" value="Valider">
+	</div>
+</form>
+```
+
+*/
+/*doc
+---
+title: Tableaux
+name: tables
+category: Base CSS
+---
+
+```html_example
+<table class="table">
+	<thead>
+		<tr>
+			<th>Colonne</th>
+			<th>Colonne</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Cellule</td>
+			<td>Cellule</td>
+		</tr>
+	</tbody>
+	<tfoot>
+		<tr>
+			<td>Colonne</td>
+			<td>Colonne</td>
+		</tr>
+	</tfoot>
+</table>
+```
+
+*/
+/**
+ *
+ * VIEWS
+ * Styles dédiés à une page / rubrique.
+ *
+ * Regroupe principalement des propriétés de positionnement(margin, padding)
+ * et de dimensions (width, height). Si des styles doivent être présents sur plusieurs
+ * pages, plutôt les placer dans `modules` ou `elements`
+ *
+ */
