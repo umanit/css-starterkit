@@ -29,7 +29,7 @@
         window.isDesktop = function(){
             return is(window.BREAKPOINTS.md);
         };
-    }
+    };
 })(
   window,
   window.jQuery

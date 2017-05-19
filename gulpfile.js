@@ -112,7 +112,7 @@ gulp.task('fonts', function () {
 
 // Check des erreurs js
 gulp.task('lint', function() {
-  gulp.src(kitPrefix + '/assets/js')
+  gulp.src(kitPrefix + '/assets/js/modules/*.js')
     .pipe(plumber())
     .pipe(jshint())
     .pipe(jshint.reporter('default'))

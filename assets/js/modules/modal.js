@@ -54,11 +54,11 @@
                     function () {
                         // rechargement checkbox
                         if (undefined !== window.checkbox) {
-                            window.checkbox()
+                            window.checkbox();
                         }
                         // rechargement ckeditor
                         if (undefined !== window.multilanguageeditor) {
-                            window.multilanguageeditor()
+                            window.multilanguageeditor();
                         }
                         // Trigg d'un event custom
                         $("#tbModal").trigger('tbModalChange');
@@ -128,11 +128,11 @@
                         modal.find('.modal-content').html(data);
                         // rechargement ckeditor
                         if (undefined !== window.multilanguageeditor) {
-                            window.multilanguageeditor()
+                            window.multilanguageeditor();
                         }
                         // rechargement checkbox
                         if (undefined !== window.checkbox) {
-                            window.checkbox()
+                            window.checkbox();
                         }
                         // Trigg d'un event custom
                         $("#tbModal").trigger('tbModalChange');
@@ -143,7 +143,7 @@
             }
         });
 
-    }
+    };
 })(
     window,
     window.jQuery
