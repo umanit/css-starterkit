@@ -115,6 +115,7 @@ gulp.task('lint', function() {
   gulp.src(kitPrefix + '/assets/js')
     .pipe(plumber())
     .pipe(jshint())
+    .pipe(jshint.reporter('default'))
   ;
 });
 
