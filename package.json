@@ -21,6 +21,7 @@
     "gulp-ignore": "^2.0.1"
   },
   "devDependencies": {
+    "gulp-hologram": "^1.2.0",
     "gulp-jshint": "^1.11.2"
   },
   "scripts": {

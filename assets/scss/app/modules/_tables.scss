@@ -2,54 +2,58 @@
 // Tables
 // ==========================================================================
 
+/*doc
+---
+title: Tableaux
+name: tables
+category: Base CSS
+---
+
+```html_example
+<table class="table">
+	<thead>
+		<tr>
+			<th>Colonne</th>
+			<th>Colonne</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Cellule</td>
+			<td>Cellule</td>
+		</tr>
+	</tbody>
+	<tfoot>
+		<tr>
+			<td>Colonne</td>
+			<td>Colonne</td>
+		</tr>
+	</tfoot>
+</table>
+```
+
+*/
+
 .table {
-	/*--- Commons ---*/
 	tr {}
 	th {}
 	td {}
 
-	/*--- THead ---*/
 	> thead {
 		> tr {
 			> th {}
 		}
 	}
 
-	/*--- TBody ---*/
 	> tbody {
 		> tr {
 			> td {}
 		}
 	}
 
-	/*--- TFoot ---*/
 	> tfoot {
 		> tr {
 			> td {}
 		}
 	}
 }
-
-/**************/
-/* /!\ OR /!\ */
-/**************/
-
-/*--- Commons ---*/
-.table {}
-.table__row {}
-.table__col {}
-
-/*--- THead ---*/
-.table__head {}
-.table__head-row {}
-.table__head-col {}
-
-/*--- TBody ---*/
-.table__body {}
-.table__body-row {}
-.table__body-col {}
-
-/*--- TFoot ---*/
-.table__foot {}
-.table__foot-row {}
-.table__foot-col {}

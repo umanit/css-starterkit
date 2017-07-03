@@ -1,0 +1,21 @@
+        				</div> <!-- /.col-*-* -->
+        			</div> <!-- /.row -->
+            </div> <!-- /.container -->
+		</section> <!-- /.content -->
+
+		<script>
+
+            $('body').scrollspy({ target: '#scrollspy' });
+
+            // Afficher / Masquer la source
+            $('.codeBlock').each(function(){
+            	var $source = $(this).find('.highlight').addClass('collapse');
+
+                $(this).prepend('<button type="button" class="btn btn-primary" data-toggle="collapse">Afficher la source</button>');
+                $(this).find('[data-toggle="collapse"]').on('click', function(){
+                	$source.slideToggle('fast');
+                });
+            });
+        </script>
+	</body>
+</html>

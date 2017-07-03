@@ -2,6 +2,19 @@
 // Buttons
 // ==========================================================================
 
+/*doc
+---
+title: Boutons
+name: buttons
+category: Base CSS
+---
+
+```html_example
+<a href="#" class="btn btn-default">Bouton</a>
+```
+
+*/
+
 .btn, .btn:visited {
 	&:hover, &:focus {}
 }

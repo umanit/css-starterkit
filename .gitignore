@@ -1,3 +1,4 @@
+.DS_Store
 .idea/
 .sass-cache/
 index.html
@@ -9,3 +10,4 @@ assets/scss/vendor/.DS_Store
 node_modules
 TODO.md
 .DS_Store
+/styleguide/*.html

@@ -11,7 +11,8 @@ var gulp = require('gulp'),
     order = require('gulp-order'), // Ordonner le traitement de fichiers
     argv = require('yargs').argv, // Récupérer arguments de la commande gulp
     gulpif = require('gulp-if'), // Conditionnelles dans gulp
-    jshint = require('gulp-jshint'); // Linter JS
+    jshint = require('gulp-jshint'), // Linter JS
+    hologram = require('gulp-hologram'); // Génération du guide de style
 
 var kitPrefix = './',
     destPaths = {
@@ -67,6 +68,9 @@ var isSymfony = false;
 
     etc...
  */
+function onError(err) {
+    this.emit('end');
+}
 
 if (isSymfony) {
     kitPrefix = './app/Resources/';
@@ -79,9 +83,8 @@ if (isSymfony) {
 }
 
 // SASS et minification, compilation en CSS
-gulp.task('css', function () {
-    console.log(destPaths.css);
-    gulp.src('assets/scss/**/*.scss')
+gulp.task('css', function() {
+    return gulp.src('assets/scss/**/*.scss')
         .pipe(plumber())
         .pipe(compass({
             sass: kitPrefix + 'assets/scss',
@@ -90,9 +93,16 @@ gulp.task('css', function () {
             images: destPaths.img,
             line_comments: true
         }))
+        .on('error', onError)
         .pipe(gulpif(argv.production, minifyCSS()))
         .pipe(gulp.dest(destPaths.css))
     ;
+});
+
+// Génération du guide de style
+gulp.task('styleguide', ['css'], function(){
+    return gulp.src('styleguide/hologram_config.yml')
+        .pipe(hologram());
 });
 
 // On copie les images ailleurs (de app/Resources à web/)
@@ -137,13 +147,14 @@ gulp.task('js', function () {
 
 // La tâche par défaut (gulp) regénère tous les assets.
 // le paramètre --production exécute les tâches js et css en minifiant les fichiers.
-gulp.task('default', ['lint', 'js', 'images', 'fonts', 'css']);
+gulp.task('default', ['lint', 'js', 'images', 'fonts', 'styleguide']);
 
 gulp.task('watch', function () {
     var onChange = function (event) {
         console.log('File '+event.path+' has been '+event.type);
     };
     gulp.watch(kitPrefix + 'assets/scss/**/*.scss', ['css']).on('change', onChange);
+    gulp.watch(kitPrefix + 'assets/css/**/*.css', ['styleguide']).on('change', onChange);
     gulp.watch(kitPrefix + 'assets/js/**/*.js', ['js']).on('change', onChange);
     gulp.watch(kitPrefix + 'assets/img/**/*', ['images']).on('change', onChange);
     gulp.watch(kitPrefix + 'assets/fonts/**/*', ['fonts']).on('change', onChange);
