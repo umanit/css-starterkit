@@ -1,7 +1,7 @@
 /*****************************************************************************
  * UmanIT - Module Javascript gérant les modales
  *
- * <a href="/ma-page" data-target="#tbModal">S'ouvre dans une modale</a>
+ * <a href="/ma-page" data-modal-target="#tbModal">S'ouvre dans une modale</a>
  * <a href="/action-dangereuse" data-confirm="Attention, action dangeureuse, etes-vous sur ?">Confirmation</a>
  *
  * Note : nécessite un gestion des layout standard et ajax ainsi qui markup compatible avec Twitter Bootstrap
@@ -72,9 +72,9 @@
             e.preventDefault();
             $('#confirmation').find('.modal-body').html($(this).data("confirm"));
 
-            // Report de l'attribut target
-            if ($(this).data("target")) {
-                $('#confirmation .confirm-btn').attr("data-target", $(this).data("target"));
+            // Report de l'attribut modal-target
+            if ($(this).data("modal-target")) {
+                $('#confirmation .confirm-btn').attr("data-modal-target", $(this).data("modal-target"));
             }
             // Report de l'attribut Size
             if ($(this).data("modalSize")) {
@@ -92,7 +92,7 @@
         });
 
         // ouverture d'une modale
-        $(document).on('click', '[data-target]', function (e) {
+        $(document).on('click', '[data-modal-target]', function (e) {
             var size = "md";
             if ($(this).attr('data-modal-size')) {
                 size = $(this).data('modal-size');
@@ -100,7 +100,7 @@
             // on ne charge pas la modale si il y a aussi confirmation
             if (!$(this).data("confirm")) {
                 e.preventDefault();
-                _loadModal($(this).attr("href"), $(this).data("target"), size);
+                _loadModal($(this).attr("href"), $(this).data("modal-target"), size);
             }
         });
 
