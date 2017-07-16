@@ -6,6 +6,7 @@ This is a starter kit for setting up any web project faster.
 
 * [Install NodeJS](https://docs.npmjs.com/getting-started/installing-node)
 * [Install Compass](http://compass-style.org/install/)
+* Hologram (`sudo gem install hologram`)
 
 ## Installation
 
