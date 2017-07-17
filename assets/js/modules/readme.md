@@ -1,8 +1,8 @@
 ## Javascript
 
-Les javascripts sont découpés en modules et chargés à la demande. Chaque Bundle embarque ses javascripts.
+Les javascripts sont découpés en modules et chargés à la demande.
 
-Les librairies tierces sont ajoutées au CoreBundle dans le sous dossier "vendor"
+Les librairies tierces sont ajoutées dans le sous dossier "vendor"
 
 Les modules sont définis dans les fichiers sous `modules/`. Un module par fichier
 
@@ -23,7 +23,7 @@ Les modules sont définis dans les fichiers sous `modules/`. Un module par fichi
 
 ### boot.js et chargement
 
-Les modules sont déclarés dans les fichier `modules.js` (ou dans des fichiers fragmentés sous le dossier "modules" de chaque Bundle) et doivent respecter la syntaxe suivante :
+Les modules sont déclarés dans des fichiers fragmentés sous le dossier "modules" et doivent respecter la syntaxe suivante :
 
 ```Javascript
 /**
