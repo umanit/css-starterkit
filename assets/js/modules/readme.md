@@ -62,7 +62,7 @@ Veillez à vérifier les dépendences entre modules... au moins de manière info
 ```
 
 
-## Modales
+## modale.js
 
 En BO comme en FO les modales Bootstrap 3 sont utilisés. Ne pas se baser sur la doc des modales bootstrap.
 
@@ -115,7 +115,7 @@ $('#tbModal').on('tbModalChange', function(){
 });
 ```
 
-## Confirmation
+### Confirmation
 
 Une confirmation au clic sur un lien peut être mise en place de la façon suivante :
 
