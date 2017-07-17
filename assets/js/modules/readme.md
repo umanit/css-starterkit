@@ -6,21 +6,19 @@ Les librairies tierces sont ajoutées au CoreBundle dans le sous dossier "vendor
 
 Les modules sont définis dans les fichiers sous `modules/`. Un module par fichier
 
-### Architecture des bundles
+### Architecture
 
 ```
-   - CoreBundle/
-       + Resources/
            + assets/
                + js/
-                   + vendor/                # Seulement pour le CoreBundle et AdminBundle
+                   + vendor/
                    |   + jquery/
                    |   + ...
                    + modules/
                    |   + mon_module1.js
                    |   + mon_module2.js
                    |   + mon_module3.js
-                   + boot.js                # Seulement pour le CoreBundle et AdminBundle
+                   + boot.js
 ```
 
 ### boot.js et chargement
@@ -43,11 +41,11 @@ Les modules sont déclarés dans les fichier `modules.js` (ou dans des fichiers 
 
 ```
 
-Le CoreBundle fournit `boot.js` qui se charge de charger tous les modules. `boot.js` lit l'attribut `data-modules` de la balise `<html>`.
+`boot.js` se charge de charger tous les modules. `boot.js` lit l'attribut `data-modules` de la balise `<html>`.
 
-Afin de charger un module, vous devez le déclarer en l'ajoutant au bloc Twig `{% block js_module %}` en ayant pris soin de rappeler le parent.
+Afin de charger un module, vous devez le déclarer dans la balise HTML
 
-Exemple :
+Exemple en TWIG :
 
 ```
     {% block js_modules %}{{parent()}} nom_du_module{% endblock js_modules %}
@@ -71,8 +69,10 @@ En BO comme en FO les modales Bootstrap 3 sont utilisés. Ne pas se baser sur la
 Pour qu'un lien s'ouvre dans une modale :
 
 ```HTML
-<a href="/my/controller" data-target="#akModal">Cliquez moi !</a>
+<a href="/my/controller" data-modal-target="#tbModal">Cliquez moi !</a>
 ```
+
+NB : "#tbModal" pour "Twitter Bootstrap Modal".
 
 ### Formulaire dans modales
 
@@ -128,27 +128,3 @@ ou pour un formulaire :
 ```
 
 Une petite modale s'affichera avec en contenu texte, la valeur du `data-confirm`.
-
-# SIP
-
-Le SIP permet de restreinde l'accès de salarié sur une page.
-
-Cette restriction se base sur le périmètre de l'employee et une date (optionnel).
-
-Si la rêgle match avec l'utilisateur courant, il est redirigé vers une page, en remplacant si besoin ses rôles par un rôle paramétrable.
-
-Exemple de paramétrage SIP (à mettre dans `app/config/akkalia.yml`) :
-```YAML
-akkalia_user:
-    sip:
-        -
-           perimeter: ['1.25', '1.27', '1.32.125.583']
-           date:
-               begin: '2017-02-29T15:52:00+0100'
-               end: '2017-03-29T15:52:00+0100'
-           replace_role: 'ROLE_USER'
-           page: 5
-```
-
-Le paramètre `page` correspond à l'identifiant technique d'une page dans `Contenus` > `Pages`> du BO.
-
