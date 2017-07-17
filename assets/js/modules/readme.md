@@ -103,14 +103,14 @@ Ajouter une taille parmis "sm", "md" ou "lg" pour avoir une modale de taille pet
 
 ```
 
-### akModalChange Event
+### tbModalChange Event
 
-La modale déclanche un trigger nommé `akModalChange` afin de faciliter les traitements de callback.
+La modale déclanche un trigger nommé `tbModalChange` afin de faciliter les traitements de callback.
 
 Ce event javascript peut être utilisé pour lancer des appels asynchrones sur l'écran en fond (pour mettre à jour une liste qui vient d'être modifiée par la modale par exemple).
 
 ```Javascript
-$('#akModal').on('akModalChange', function(){
+$('#tbModal').on('tbModalChange', function(){
     // Do your stuffs here
 });
 ```
