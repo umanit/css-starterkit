@@ -146,10 +146,13 @@ Une petite modale s'affichera avec en contenu texte, la valeur du `data-confirm`
 
 ### helpers.js
 
+* Nom : `helpers`
+* Dépendances : `-`
+
 Ce module est destiné à accueillir différents helpers. Dans le starterkit, nous l'initialisons avec des fonctions permettant de tester la taille de l'écran :
 
 * `isMobile()`
-* `isTablet()`
+* `isTablet()` 
 * `isDesktop()`
 
 Présentes dans le scope de `export`, on peut les utiliser ainsi dans n'importe quel autre module :
