@@ -1,12 +1,21 @@
-## Javascript
+# Javascript
 
 Les javascripts sont découpés en modules et chargés à la demande.
 
-Les librairies tierces sont ajoutées dans le sous dossier "vendor"
+Les librairies tierces sont ajoutées dans le sous dossier "vendor".
 
-Les modules sont définis dans les fichiers sous `modules/`. Un module par fichier
+Les modules sont définis dans les fichiers sous `modules/` : Un module par fichier.
 
-### Architecture
+## Sommaire
+
+1. [Architecture](#architecture)
+2. [boot.js et chargement](#boot.js-et-chargement)
+3. [Dépendances](#dépendances)
+4. [Présentation des modules](#présentation-des-modules)
+    1. [modal.js](#modal.js)
+    2. [helpers.js](#helpers.js) 
+
+## Architecture
 
 ```
            + assets/
@@ -21,7 +30,7 @@ Les modules sont définis dans les fichiers sous `modules/`. Un module par fichi
                    + boot.js
 ```
 
-### boot.js et chargement
+## boot.js et chargement
 
 Les modules sont déclarés dans des fichiers fragmentés sous le dossier "modules" et doivent respecter la syntaxe suivante :
 
@@ -31,7 +40,7 @@ Les modules sont déclarés dans des fichiers fragmentés sous le dossier "modul
  * Description intelligible du module
  */
 ;(function(exports, $) {
-    exports.nom_du_module = function() {
+    exports.nomDuModule = function() {
         // Feel free to stick your stuff here.
     }
 })(
@@ -43,7 +52,7 @@ Les modules sont déclarés dans des fichiers fragmentés sous le dossier "modul
 
 `boot.js` se charge de charger tous les modules. `boot.js` lit l'attribut `data-modules` de la balise `<html>`.
 
-Afin de charger un module, vous devez le déclarer dans la balise HTML
+Afin de charger un module, vous devez le déclarer dans la balise HTML.
 
 Exemple en TWIG :
 
@@ -51,7 +60,7 @@ Exemple en TWIG :
     {% block js_modules %}{{parent()}} nom_du_module{% endblock js_modules %}
 ```
 
-### Dépendences
+## Dépendences
 
 Veillez à vérifier les dépendences entre modules... au moins de manière informative
 ```Javascript
@@ -61,10 +70,16 @@ Veillez à vérifier les dépendences entre modules... au moins de manière info
     }
 ```
 
+## Présentation des modules
 
-## modale.js
+Certains modules souvent utilisés sont fournis de base dans notre starterKit. Voici leur description.
 
-En BO comme en FO les modales Bootstrap 3 sont utilisés. Ne pas se baser sur la doc des modales bootstrap.
+### modal.js
+
+* Nom : `modal`
+* Dépendances : `bootstrap.js`
+
+En BO comme en FO les modales Bootstrap 3 sont utilisées. Ne pas se baser sur la doc des modales bootstrap.
 
 Pour qu'un lien s'ouvre dans une modale :
 
@@ -74,9 +89,9 @@ Pour qu'un lien s'ouvre dans une modale :
 
 NB : "#tbModal" pour "Twitter Bootstrap Modal".
 
-### Formulaire dans modales
+#### Formulaire dans modales
 
-Par défaut, les formualaires soumis au sein d'une modale redirige vers le layout classique. Si le retour du formulaire doit demeurer dans la modale, il est nécessaire d'ajouter le data attribute `data-async="true"` **sur l'input ou le button submit**.
+Par défaut, les formualaires soumis au sein d'une modale redirigent vers le layout classique. Si le retour du formulaire doit demeurer dans la modale, il est nécessaire d'ajouter le data attribute `data-async="true"` **sur l'input ou le button submit**.
 
 eg. :
 
@@ -94,7 +109,7 @@ ou
 /!\ Attention, le formulaire doit avoir un attribut "ACTION" !
 
 
-### Taille de la modale
+#### Taille de la modale
 
 Ajouter une taille parmis "sm", "md" ou "lg" pour avoir une modale de taille petite, moyenne ou large.
 
@@ -103,9 +118,9 @@ Ajouter une taille parmis "sm", "md" ou "lg" pour avoir une modale de taille pet
 
 ```
 
-### tbModalChange Event
+#### tbModalChange Event
 
-La modale déclanche un trigger nommé `tbModalChange` afin de faciliter les traitements de callback.
+La modale déclenche un trigger nommé `tbModalChange` afin de faciliter les traitements de callback.
 
 Ce event javascript peut être utilisé pour lancer des appels asynchrones sur l'écran en fond (pour mettre à jour une liste qui vient d'être modifiée par la modale par exemple).
 
@@ -115,7 +130,7 @@ $('#tbModal').on('tbModalChange', function(){
 });
 ```
 
-### Confirmation
+#### Confirmation
 
 Une confirmation au clic sur un lien peut être mise en place de la façon suivante :
 
@@ -128,3 +143,16 @@ ou pour un formulaire :
 ```
 
 Une petite modale s'affichera avec en contenu texte, la valeur du `data-confirm`.
+
+### helpers.js
+
+Ce module est destiné à accueillir différents helpers. Dans le starterkit, nous l'initialisons avec des fonctions permettant de tester la taille de l'écran :
+
+* `isMobile()`
+* `isTablet()`
+* `isDesktop()`
+
+Présentes dans le scope de `export`, on peut les utiliser ainsi dans n'importe quel autre module :
+```
+exports.isTablet()
+```
