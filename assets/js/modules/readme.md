@@ -9,11 +9,11 @@ Les modules sont définis dans les fichiers sous `modules/` : Un module par fich
 ## Sommaire
 
 1. [Architecture](#architecture)
-2. [boot.js et chargement](#boot.js-et-chargement)
+2. [boot.js et chargement](#bootjs-et-chargement)
 3. [Dépendances](#dépendances)
 4. [Présentation des modules](#présentation-des-modules)
-    1. [modal.js](#modal.js)
-    2. [helpers.js](#helpers.js) 
+    1. [modal.js](#modaljs)
+    2. [helpers.js](#helpersjs) 
 
 ## Architecture
 
@@ -60,7 +60,7 @@ Exemple en TWIG :
     {% block js_modules %}{{parent()}} nom_du_module{% endblock js_modules %}
 ```
 
-## Dépendences
+## Dépendances
 
 Veillez à vérifier les dépendences entre modules... au moins de manière informative
 ```Javascript
