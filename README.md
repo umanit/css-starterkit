@@ -10,19 +10,35 @@ This is a starter kit for setting up any web project faster.
 
 ## Installation
 
-First, run :
+### Symfony
+The folder `assets` goes in `app/Resources/`.
+
+Adjacent files (`.gitignore`, `gulpfile.js`, `package.json`, `package-lock.json`) go at the project root.
+
+### Wordpress
+The folder `assets` goes in `wp-content/themes/{my-theme}`.
+
+Adjacent files (`.gitignore`, `gulpfile.js`, `package.json`, `package-lock.json`) go at the project root.
+
+### Drupal
+The folder `assets` goes in `sites/all/themes/{my-theme}`.
+
+Adjacent files (`.gitignore`, `gulpfile.js`, `package.json`, `package-lock.json`) go at the project root.
+
+### Bolt
+The folder `assets` goes in `public/theme/{my-theme}`.
+
+Adjacent files (`.gitignore`, `gulpfile.js`, `package.json`, `package-lock.json`) go at the project root.
+
+Then, run :
 
 `npm install`
 
-Then, open `gulpfile.js` and set the variable `isSymfony` at true if it's a Symfony project. Else, you can write the destinations path for assets in the `destPaths` object.
-
-```
-var destPaths = {
-    css: './web/assets/css',
-    js: './web/assets/js',
-    img: './web/assets/img',
-    fonts: './web/assets/fonts'
-}
-```
-
-Tasks `js` et `fonts` are optional. They are required if you're in a Symfony project (they copy images and fonts to web directory)
+Then, open `gulpfile.js` and set the variable `techName` to :
+ 
+ * bolt
+ * drupal
+ * symfony
+ * wordpress
+ 
+Set `themeName` to the name of your theme (used by Gulp in Drupal, Bolt and Wordpress).
