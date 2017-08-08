@@ -6,9 +6,9 @@ var themeName = 'my_theme';
 
 /**
  * À ÉDITER
- * @type string : le nom de la technologie à choisir parmis bolt, drupal, symfony, wordpress.
+ * @type string : le nom de la technologie à choisir parmis bolt, custom, drupal, symfony, wordpress.
  */
-var techName = 'symfony';
+var techName = 'custom';
 
 
 // Plugins
@@ -35,6 +35,14 @@ var parameters = {
             css: './public/theme/' + themeName + '/assets/css',
             js: './public/theme/' + themeName + '/assets/js',
             styleguide: './public/styleguide',
+        },
+    },
+    custom: {
+        kitPrefix: './',
+        destPaths: {
+            css: './assets/css',
+            js: './assets/js',
+            styleguide: './styleguide',
         },
     },
     drupal: {
@@ -91,10 +99,12 @@ gulp.task('hologram', ['css'], function() {
 });
 // Déplace le guide de style dans un dossier public (accessible depuis un serveur web)
 gulp.task('styleguide', ['hologram'], function() {
-    setTimeout(function() {
-        gulp.src(parameters[techName].kitPrefix + '/assets/hologram/**/*.*')
-            .pipe(gulp.dest(parameters[techName].destPaths.styleguide));
-    }, 500);
+    if (techName !== 'custom') {
+        setTimeout(function () {
+            gulp.src(parameters[techName].kitPrefix + '/assets/hologram/**/*.*')
+                .pipe(gulp.dest(parameters[techName].destPaths.styleguide));
+        }, 500);
+    }
 });
 
 // On copie les images ailleurs (de app/Resources à web/)

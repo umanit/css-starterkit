@@ -30,6 +30,9 @@ The folder `assets` goes in `public/theme/{my-theme}`.
 
 Adjacent files (`.gitignore`, `gulpfile.js`, `package.json`, `package-lock.json`) go at the project root.
 
+### Custom
+This one is for standalone HTML projects. The entire starterkit is dropped at the project root.
+
 Then, run :
 
 `npm install`
