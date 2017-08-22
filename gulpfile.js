@@ -25,7 +25,8 @@ var gulp = require('gulp'),
     argv = require('yargs').argv, // Récupérer arguments de la commande gulp
     gulpif = require('gulp-if'), // Conditionnelles dans gulp
     jshint = require('gulp-jshint'), // Linter JS
-    hologram = require('gulp-hologram'); // Génération du guide de style
+    hologram = require('gulp-hologram'), // Génération du guide de style
+    path = require('path'); // Gestionnaire de chemins
 
 // Variables selon les typologies de projets.
 var parameters = {
@@ -78,10 +79,11 @@ gulp.task('css', function() {
     return gulp.src(parameters[techName].kitPrefix + '/assets/scss/**/*.scss')
         .pipe(plumber())
         .pipe(compass({
-            sass: parameters[techName].kitPrefix + '/assets/scss',
-            css: parameters[techName].destPaths.css,
-            font: parameters[techName].destPaths.fonts,
-            images: parameters[techName].destPaths.img,
+            project: path.join(__dirname, parameters[techName].kitPrefix, '/assets'),
+            sass: 'scss',
+            css: 'css',
+            font: 'fonts',
+            images: 'img',
             line_comments: true
         }))
         .on('error', onError)
