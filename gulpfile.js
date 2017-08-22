@@ -89,7 +89,7 @@ gulp.task('css', function() {
         .on('error', onError)
         .pipe(gulpif(argv.production, minifyCSS()))
         .pipe(gulpif(argv.prod, minifyCSS()))
-        .pipe(gulp.dest(parameters[techName].destPaths.css))
+        .pipe(gulp.dest('css'))
         ;
 });
 
