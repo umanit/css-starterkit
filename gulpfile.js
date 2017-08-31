@@ -83,7 +83,7 @@ gulp.task('css', function() {
             sass: 'scss',
             css: 'css',
             font: 'fonts',
-            images: 'img',
+            image: 'img',
             line_comments: true
         }))
         .on('error', onError)
