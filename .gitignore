@@ -3,3 +3,7 @@
 .sass-cache/
 node_modules
 styleguide
+index.php
+assets/css/style.css
+assets/js/scripts.js
+TODO.md
