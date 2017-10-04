@@ -1,7 +1,7 @@
 /*****************************************************************************
- * Omaha - Point d'entrée
+ * UmanIT - Point d'entrée
  * Chargement des modules js
- * @author tcaron <tristan.caron@free.fr>
+ * @author tcaron <tcaron@umanit.fr>
  *****************************************************************************/
 
 ;(function (jq, container) {

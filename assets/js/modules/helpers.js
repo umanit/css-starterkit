@@ -1,6 +1,6 @@
 /** ***************************************************************************
  * Module Javascript chargeant les helpers
- * @author tcaron <tristan.caron@free.fr> ldaguise <luciledaguise@gmail.com>
+ * @author tcaron <tcaron@umanit.fr>, ldaguise <ldaguise@umanit.fr>
  *****************************************************************************/
 
 ;(function(exports, $) {
