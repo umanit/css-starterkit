@@ -14,7 +14,7 @@ var techName = 'custom';
 // Plugins
 var gulp = require('gulp'),
     compass = require('gulp-compass'), // Compilation en Sass avec Compass
-    minifyCSS = require('gulp-minify-css'), // Minification CSS
+    cleanCSS = require('gulp-clean-css'), // Minification CSS
     concat = require('gulp-concat'), // Concaténation de fichiers
     uglify = require('gulp-uglify'), // minifier JS
     plumber = require('gulp-plumber'), // Permet, lors d'actions pipées que le script plante pas même si erreurs
@@ -87,8 +87,8 @@ gulp.task('css', function() {
             line_comments: true
         }))
         .on('error', onError)
-        .pipe(gulpif(argv.production, minifyCSS()))
-        .pipe(gulpif(argv.prod, minifyCSS()))
+        .pipe(gulpif(argv.production, cleanCSS()))
+        .pipe(gulpif(argv.prod, cleanCSS()))
         .pipe(gulp.dest('css'))
         ;
 });
