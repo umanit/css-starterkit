@@ -1,53 +1,81 @@
-:warning: _You are viewing current master branch using Twitter Bootstrap v4.0.0. For older version using Bootstrap 3.3.7 please switch to branch [bootstrap3](https://github.com/umanit/css-starterkit/tree/bootstrap3)_
+# Hey !
 
-# Hey!
+Ce starterkit permet d'instancier l'intégration d'un projet web plus rapidement.
+Il utilise [Webpack encore](https://symfony.com/doc/current/frontend.html).
 
-This is a starter kit for setting up any web project faster.
+## Pré-requis
 
-## Requires
-
-* [Install NodeJS](https://docs.npmjs.com/getting-started/installing-node)
-* [Install Compass](http://compass-style.org/install/)
-* Hologram (`sudo gem install hologram`)
+* [Installer NodeJS](https://docs.npmjs.com/getting-started/installing-node)
+* Installer `hologram` (`sudo gem install hologram`)
 
 ## Installation
 
-### Step 1
+Si besoin, ouvrir `webpack.config.js` et remplir les variables suivantes :
 
-#### Symfony
-The folder `assets` goes in `app/Resources/`.
+```js
+// Chemin où se trouve le dossier assets du starterkit
+var assetPath = './assets';
+// Path de build relatif au projet
+var outputPath = 'assets/build';
+// Path public relatif à la racine web
+var publicPath = '/assets/build';
+// Utiliser le hashage des fichiers générés ? (oui pour Symfony, non pour les autres projets)
+var isHashed = false;
+```
 
-Adjacent files (`.gitignore`, `gulpfile.js`, `package.json`, `package-lock.json`) go at the project root.
+Exécuter la commande suivante pour installer les packages :
+```
+yarn install
+```
 
-#### Wordpress
-The folder `assets` goes in `wp-content/themes/{my-theme}`.
+_That's all, folks!_
 
-Adjacent files (`.gitignore`, `gulpfile.js`, `package.json`, `package-lock.json`) go at the project root.
+## Utilisation
 
-#### Drupal
-The folder `assets` goes in `sites/all/themes/{my-theme}`.
+Exécuter cette commande pour compiler les assets :
+```
+yarn run encore dev
+```
 
-Adjacent files (`.gitignore`, `gulpfile.js`, `package.json`, `package-lock.json`) go at the project root.
+Celle-ci pour que webpack écoute les modifications sur les fichiers et recompile :
+```
+yarn run encore dev --watch
+```
 
-#### Bolt
-The folder `assets` goes in `public/theme/{my-theme}`.
+Celle-ci pour compiler pour l'environnement de production (minification, ...)
+```
+yarn run encore production
+```
 
-Adjacent files (`.gitignore`, `gulpfile.js`, `package.json`, `package-lock.json`) go at the project root.
+## Ajouter un module Javascript
 
-#### Custom
-This one is for standalone HTML projects. The entire starterkit is dropped at the project root.
+Pour ajouter un module, créer un fichier dans `assets/js` et l'ajouter dans la fonction `createSharedEntry()` de `webpack.config.js`. Voir l'exemple :
 
-### Step 2
+```js
+// Création d'un fichier unique 'app.js' pour tous les scripts
+Encore.createSharedEntry('js/app', [
+    'bootstrap',
+    assetPath + '/js/modules/[MON MODULE].js',
+    assetPath + '/js/boot.js'
+])
+```
 
-Then, run :
+⚠ Le fichier `boot.js` doit rester le dernier fichier inclus.
 
-`npm install`
+## Ajouter une librairie
 
-Then, open `gulpfile.js` and set the variable `techName` to :
+Pour ajouter une librairie (JS, CSS), l'ajouter avec `Yarn`. Par exemple :
 
- * bolt
- * drupal
- * symfony
- * wordpress
+```
+yarn add slick-carousel
+```
 
-Set `themeName` to the name of your theme (used by Gulp in Drupal, Bolt and Wordpress).
+Ensuite, dans notre JS, il suffit de l'inclure avant utilisation :
+
+```
+require('slick-carousel');
+```
+
+## À noter
+
+⚠ Lorsque `webpack` est utilisé avec l'environnement de production, [les fichiers Hologram générés ne le sont plus](https://github.com/Bluetel-Solutions/ruby-hologram-webpack-plugin/issues/2). (pas de souci avec `dev`)

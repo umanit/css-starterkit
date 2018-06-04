@@ -2,10 +2,10 @@
 # All paths should be relative to there
 
 # The directory containing the source files to parse recursively
-source: ../css
+source: ../build
 
 # The directory that hologram will build to
-destination: ./
+destination: ../build/styleguide
 
 # The assets needed to build the docs (includes header.html,
 # footer.html, etc)
@@ -27,7 +27,6 @@ documentation_assets: ./parts
 # folder. Typically this will include the css that you are trying to
 # document. May also include additional folders as needed.
 # dependencies:
-  # - ./build
 
 # To additionally output navigation for top level sections, set the value to
 # 'section'. To output navigation for sub-sections,
@@ -37,7 +36,7 @@ nav_level: all
 # Mark which category should be the index page
 # Alternatively, you may have an index.md in the documentation assets
 # folder instead of specifying this config.
-index: styleguide
+index: index
 
 # Hologram displays warnings when there are issues with your docs
 # (e.g. if a component's parent is not found, if the _header.html and/or

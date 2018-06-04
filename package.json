@@ -1,49 +1,16 @@
 {
-  "name": "front-starter-kit",
-  "version": "1.0.0",
-  "description": "This is a starter kit for setting up any web project faster.",
-  "main": "gulpfile.js",
-  "dependencies": {
-    "gulp": "^3.8.11",
-    "gulp-compass": "^2.0.4",
-    "gulp-concat": "^2.5.2",
-    "gulp-concat-css": "^2.2.0",
-    "gulp-consolidate": "^0.1.2",
-    "gulp-iconfont": "^3.0.0",
-    "gulp-if": "^1.2.5",
-    "gulp-clean-css": "^3.0.4",
-    "gulp-order": "^1.1.1",
-    "gulp-plumber": "^1.0.0",
-    "gulp-rename": "^1.2.2",
-    "gulp-uglify": "^1.2.0",
-    "lodash": "^3.8.0",
-    "yargs": "^3.10.0",
-    "gulp-ignore": "^2.0.1"
-  },
-  "devDependencies": {
-    "gulp-hologram": "^1.2.0",
-    "gulp-jshint": "^1.11.2"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/umanit/css-starterkit.git"
-  },
-  "keywords": [
-    "css",
-    "js",
-    "javascript",
-    "frontend",
-    "front",
-    "development",
-    "preprocessor"
-  ],
-  "author": "UmanIT",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/umanit/css-starterkit/issues"
-  },
-  "homepage": "https://github.com/umanit/css-starterkit#readme"
+    "devDependencies": {
+        "@symfony/webpack-encore": "^0.17.1",
+        "bootstrap": "^4.0.0",
+        "compass-mixins": "Igosuki/compass-mixins",
+        "copy-webpack-plugin": "^4.3.1",
+        "jquery": "^3.2.1",
+        "node-sass": "^4.7.2",
+        "path": "^0.12.7",
+        "popper.js": "^1.12.9",
+        "ruby-hologram-webpack-plugin": "^2.0.0",
+        "sass-loader": "^6.0.6",
+        "webpack": "^3.10.0",
+        "postcss-loader": "^2.1.0"
+    }
 }
