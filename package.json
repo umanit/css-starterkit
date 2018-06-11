@@ -1,16 +1,31 @@
 {
-    "devDependencies": {
-        "@symfony/webpack-encore": "^0.17.1",
-        "bootstrap": "^4.0.0",
-        "compass-mixins": "Igosuki/compass-mixins",
-        "copy-webpack-plugin": "^4.3.1",
-        "jquery": "^3.2.1",
-        "node-sass": "^4.7.2",
-        "path": "^0.12.7",
-        "popper.js": "^1.12.9",
-        "ruby-hologram-webpack-plugin": "^2.0.0",
-        "sass-loader": "^6.0.6",
-        "webpack": "^3.10.0",
-        "postcss-loader": "^2.1.0"
-    }
+  "name": "css-starterkit",
+  "version": "1.0.0",
+  "description": "Awesome CSS starter kit",
+  "repository": "https://github.com/umanit/css-starterkit.git",
+  "author": "UmanIT",
+  "license": "MIT",
+  "scripts": {
+    "build": "yarn run encore dev",
+    "build:prod": "yarn run encore production",
+    "build:watch": "yarn build --watch",
+    "build:prod:watch": "yarn build:prod --watch"
+  },
+  "devDependencies": {
+    "@symfony/webpack-encore": "^0.17.1",
+    "bootstrap": "^4.0.0",
+    "compass-mixins": "Igosuki/compass-mixins",
+    "copy-webpack-plugin": "^4.3.1",
+    "hologram-github-theme": "^0.1.4",
+    "jquery": "^3.2.1",
+    "node-sass": "^4.7.2",
+    "path": "^0.12.7",
+    "popper.js": "^1.12.9",
+    "postcss-loader": "^2.1.0",
+    "sass-loader": "^6.0.6",
+    "webpack": "^3.10.0"
+  },
+  "dependencies": {
+    "ruby-hologram-webpack-plugin": "^2.0.0"
+  }
 }

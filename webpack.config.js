@@ -3,7 +3,7 @@ var Encore = require('@symfony/webpack-encore');
 var webpack = require('webpack');
 var CopyWebpackPlugin = require('copy-webpack-plugin');
 var path = require('path');
-var RubyHologramPlugin = require('ruby-hologram-webpack-plugin');
+var styleguide = require('ruby-hologram-webpack-plugin');
 
 /* *********************************************************************************************************************
  * Configuration générale
@@ -57,16 +57,16 @@ Encore
 
     // Hologram
     .addPlugin(
-        new RubyHologramPlugin({
-            config: assetPath + '/hologram/hologram_config.yml'
+        new styleguide({
+            config: './hologram_config.yml'
         })
     )
 
     // Création d'un fichier unique 'app.js' pour tous les scripts
     .createSharedEntry('js/app', [
         'bootstrap',
+        assetPath + '/js/boot.js',
         //assetPath + '/js/modules/[MON MODULE].js',
-        assetPath + '/js/boot.js'
     ])
 
     // Création de la stylesheet
