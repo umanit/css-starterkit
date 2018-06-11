@@ -75,7 +75,3 @@ Ensuite, dans notre JS, il suffit de l'inclure avant utilisation :
 ```
 require('slick-carousel');
 ```
-
-## À noter
-
-⚠ Lorsque `webpack` est utilisé avec l'environnement de production, [les fichiers Hologram générés ne le sont plus](https://github.com/Bluetel-Solutions/ruby-hologram-webpack-plugin/issues/2). (pas de souci avec `dev`)
