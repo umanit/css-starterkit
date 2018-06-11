@@ -6,5 +6,5 @@
 // Usage : `font-size: rem(14)`
 
 @function rem($value) {
-  @return ($value / $font-size-base) * 1rem;
+  @return ($value / $font-size-base-px) * 1rem;
 }

@@ -1,20 +1,3 @@
 // ==========================================================================
-// Font
+// Mixins
 // ==========================================================================
-
-@mixin font-size($value, $line-height: normal) {
-	@if unitless($value) {
-		font-size: $value * 1px;
-    	font-size: ($value / 10) * 1rem;
-	} @else {
-		font-size: $value;
-	}
-
-
-    @if $line-height != normal {
-	    line-height: $line-height * 1px;
-	    line-height: ($line-height / 10) * 1rem;
-    } @else {
-    	line-height: normal;
-    }
-}
