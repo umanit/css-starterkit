@@ -1,30 +1,23 @@
-/*doc
----
-title: Généralités
-category: Index
----
-
-Ce document doit être tenu à jour pour assurer la maintenabilité et la documentation front-end.
-
-**Le guide de style est une bibliothèque des éléments graphiques utilisés sur le projet.
-Il permet de visualiser chaque élément indépendamment, facilitant les tests et la reprise de
-code.**
-
-## Hiérarchie
-
-Il est décomposé suivant ces catégories :
-
-* [Base CSS](base_css.html) : Styles de configuration du projet, éléments de base (boutons, tableaux, formulaires...)
-* [Modules](modules.html) : Composants ré-utilisables sur l'intégralité du projet
-
-*/
-
 // ==========================================================================
 // Framework
 // ==========================================================================
 
-$bootstrap: false;
-@import 'vendor/bootstrap';
+@import 'app/utilities/global'; // Override les variables Bootstrap
+
+// Option 1: Inclure l'intégralité de Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+// Option 2: Inclure des parties de Bootstrap
+// @link https://getbootstrap.com/docs/4.1/getting-started/theming/
+
+// Requis
+// @import "~bootstrap/scss/functions";
+// @import "~bootstrap/scss/variables";
+// @import "~bootstrap/scss/mixins";
+
+// Optionnels
+// @import "~bootstrap/scss/reboot";
+// ...
 
 // ==========================================================================
 // Utilities

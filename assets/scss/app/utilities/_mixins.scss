@@ -1,24 +1,4 @@
 // ==========================================================================
-// Alignment
-// ==========================================================================
-
-@mixin text-left {
-    @if $bootstrap == false {
-        text-align: left;
-    }
-}
-@mixin text-center {
-    @if $bootstrap == false {
-        text-align: center;
-    }
-}
-@mixin text-right {
-    @if $bootstrap == false {
-        text-align: right;
-    }
-}
-
-// ==========================================================================
 // Font
 // ==========================================================================
 
@@ -38,57 +18,3 @@
     	line-height: normal;
     }
 }
-
-// ==========================================================================
-// Margin / Padding
-// ==========================================================================
-
-@mixin m-a($margin-top, $margin-right: $margin-top, $margin-bottom: $margin-top, $margin-left: $margin-right) { margin: $margin-top*1px $margin-right*1px $margin-bottom*1px $margin-left*1px!important; }
-@mixin m-v($margin-top, $margin-bottom: $margin-top) { margin-top: $margin-top * 1px!important; margin-bottom: $margin-bottom * 1px!important; }
-@mixin m-h($margin-left, $margin-right: $margin-left) { margin-left: $margin-left * 1px!important; margin-right: $margin-right * 1px!important; }
-@mixin m-t($value) { margin-top: $value * 1px!important; }
-@mixin m-r($value) { margin-right: $value * 1px!important; }
-@mixin m-b($value) { margin-bottom: $value * 1px!important; }
-@mixin m-l($value) { margin-left: $value * 1px!important; }
-
-@mixin p-a($padding-top, $padding-right: $padding-top, $padding-bottom: $padding-top, $padding-left: $padding-right) { padding: $padding-top*1px $padding-right*1px $padding-bottom*1px $padding-left*1px!important; }
-@mixin p-v($padding-top, $padding-bottom: $padding-top) { padding-top: $padding-top * 1px!important; padding-bottom: $padding-bottom * 1px!important; }
-@mixin p-h($padding-left, $padding-right: $padding-left) { padding-left: $padding-left * 1px!important; padding-right: $padding-right * 1px!important; }
-@mixin p-t($value) { padding-top: $value * 1px!important; }
-@mixin p-r($value) { padding-right: $value * 1px!important; }
-@mixin p-b($value) { padding-bottom: $value * 1px!important; }
-@mixin p-l($value) { padding-left: $value * 1px!important; }
-
-// ==========================================================================
-// Media queries
-// @deprecated : utiliser media-breakpoint-up($value) et media-breakpoint-down($value)
-// @see https://getbootstrap.com/docs/4.0/layout/overview/#responsive-breakpoints
-// ==========================================================================
-
-//@mixin mq-min($value) {
-//    @media (min-width: map-get($breakpoints, $value)){
-//        @content;
-//    }
-//}
-
-//@mixin mq-max($value) {
-//    @media (max-width: map-get($breakpoints-max, $value)){
-//        @content;
-//    }
-//}
-
-// ==========================================================================
-// Screen readers
-// ==========================================================================
-
-@mixin sr-only {
-    position: absolute;
-    width: 1px; height: 1px;
-    margin: -1px; padding: 0;
-    overflow: hidden;
-    clip: rect(0,0,0,0);
-
-    border: 0;
-}
-
-
