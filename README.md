@@ -47,6 +47,14 @@ Celle-ci pour compiler pour l'environnement de production (minification, ...)
 yarn run encore production
 ```
 
+Des scripts NPM sont à disposition pour simplifier l'appel des commandes précédentes :
+```js
+yarn build // => yarn run encore dev
+yarn build:watch // => yarn run encore dev --watch
+yarn prod // => yarn run encore prod
+yarn prod:watch // => yarn run encore prod --watch
+```
+
 ## Ajouter un module Javascript
 
 Pour ajouter un module, créer un fichier dans `assets/js` et l'ajouter dans la fonction `createSharedEntry()` de `webpack.config.js`. Voir l'exemple :
