@@ -55,21 +55,6 @@ yarn prod // => yarn run encore prod
 yarn prod:watch // => yarn run encore prod --watch
 ```
 
-## Ajouter un module Javascript
-
-Pour ajouter un module, créer un fichier dans `assets/js` et l'ajouter dans la fonction `createSharedEntry()` de `webpack.config.js`. Voir l'exemple :
-
-```js
-// Création d'un fichier unique 'app.js' pour tous les scripts
-Encore.createSharedEntry('js/app', [
-    'bootstrap',
-    assetPath + '/js/modules/[MON MODULE].js',
-    assetPath + '/js/boot.js'
-])
-```
-
-⚠ Le fichier `boot.js` doit rester le dernier fichier inclus.
-
 ## Ajouter une librairie
 
 Pour ajouter une librairie (JS, CSS), l'ajouter avec `Yarn`. Par exemple :
