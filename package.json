@@ -13,7 +13,7 @@
   },
   "devDependencies": {
     "@symfony/webpack-encore": "^0.17.1",
-    "bootstrap": "^4.0.0",
+    "bootstrap": ">=4.1.2",
     "compass-mixins": "Igosuki/compass-mixins",
     "copy-webpack-plugin": "^4.3.1",
     "hologram-github-theme": "^0.1.4",
@@ -23,9 +23,10 @@
     "popper.js": "^1.12.9",
     "postcss-loader": "^2.1.0",
     "sass-loader": "^6.0.6",
-    "webpack": "^3.10.0"
-  },
-  "dependencies": {
+    "webpack": "^3.10.0",
+    "cryptiles": ">=4.1.2",
+    "url-parse": ">=1.4.3",
+    "hoek": ">=4.2.1",
     "ruby-hologram-webpack-plugin": "^2.0.0"
   }
 }
