@@ -16,7 +16,7 @@ let assetPath = './assets';
 // Path de build relatif au projet
 let outputPath = 'assets/build';
 // Path public relatif à la racine web
-let publicPath = '/assets/build';
+let publicPath = '/build';
 // Utiliser le hashage des fichiers générés ? (oui pour Symfony, non pour les autres projets)
 let isHashed = false;
 
@@ -70,7 +70,7 @@ Encore
   ])
 
   // Création de la stylesheet
-  .addStyleEntry('/css/style', assetPath + '/scss/style.scss')
+  .addStyleEntry('css/style', assetPath + '/scss/style.scss')
 
   // Active SASS et Compass
   .enableSassLoader(function (options) {
