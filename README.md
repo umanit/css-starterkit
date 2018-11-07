@@ -18,7 +18,7 @@ var assetPath = './assets';
 // Path de build relatif au projet
 var outputPath = 'assets/build';
 // Path public relatif à la racine web
-var publicPath = '/assets/build';
+var publicPath = '/build';
 // Utiliser le hashage des fichiers générés ? (oui pour Symfony, non pour les autres projets)
 var isHashed = false;
 ```
